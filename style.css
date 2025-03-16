@@ -1,0 +1,349 @@
+
+@font-face{
+    font-family : myfont;
+    src : url(../fonts/Tektur/static/Tektur-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: myfont, Roboto, sans-serif;
+    color:white;
+    border:none;
+    font-size:1rem;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#bgv{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+.layout{
+    display:flex;
+    flex-wrap:nowrap;
+}
+.dashboard{
+    flex: 0 0 max(20%,200px);
+    background-color: rgba(0, 0, 0, 0.7);
+    height:100vh;
+}
+.main{
+    flex:1;
+    background-color: rgba(0, 0, 0, 0.3);
+    height:100vh;
+}
+
+div.logo{
+    display:flex;
+    align-items:center;
+    padding:20px;
+    margin-top:20px;
+    gap:10px;
+    font-size: 1.1rem;
+    flex-wrap:nowrap;
+    flex:1;
+    min-width:0;
+    white-space: normal;
+    word-break: break-word;
+}
+
+div.logo > svg{
+    height:60px;
+}
+
+div.logo{
+    margin-bottom:20px;
+}
+
+div.links > ul > li > svg{
+    flex:0 0 min(36px, 20%);
+}
+
+div.links > ul > li{
+    display:flex;
+    align-items:center;
+    gap:10%;
+    flex-wrap:nowrap;
+    min-width:0;
+    white-space: normal;
+    word-break: break-word;
+    padding-left:10%;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+div.links > ul > li:nth-child(6){
+    margin-bottom:50px;
+}
+
+li:hover{
+    background-color: rgba(0,0,0,0.5);
+    cursor:pointer;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Now the main content. */
+
+.navbar{
+    height:20vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navbar > div{
+    display:flex;
+    align-items:center;
+    margin-left: 5%;
+}
+
+.navbar > div:nth-child(1){
+    gap:7%;
+    margin-right:min(5%, 100px);
+}
+
+div.navbar > div > svg{
+    height:30px;
+}
+
+.search{
+    width:max(300px, 35%);
+    background-color:rgba(0, 0, 0, 0.5);
+    height:30px;
+    border-radius:15px;
+    border:2px solid white;
+}
+
+.search:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor:pointer;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.search:active{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.navbar > div:nth-child(2){
+    justify-content: end;
+    margin-right:min(200px, 10%);
+    gap:4%;
+}
+
+div.navbar > div:nth-child(2) > svg{
+    padding-right:5%;
+}
+
+div.navbar > div:nth-child(2) > svg{
+    cursor:pointer;
+}
+
+/* Hi there */
+
+div.hithere{
+    display:flex;
+    gap:4%;
+    margin-right:min(5%, 100px);
+}
+
+div.hithere > img{
+    height:50px;
+    border-radius:25px;
+}
+
+div.hithere > div > p:nth-child(1){
+    font-size:0.8rem;
+}
+
+/* Last nav div */
+
+.buttons{
+    display:flex;
+    gap:5%;
+    justify-content: end;
+    margin-right:min(200px, 9%);
+}
+
+button{
+    padding:2% 5%;
+    background-color: rgba(85, 12, 145, 0.9);
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
+}
+
+button:hover{
+    filter:brightness(1.3);
+    cursor:pointer;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Content */
+
+div.content{
+    display:flex;
+    overflow:auto;
+    height:80vh;
+}
+
+div.leftbar{
+    width:65%;
+}
+div.rightbar{
+    flex:1;
+}
+
+.leftbar > p{
+    margin-top:20px;
+    margin-left:35px;
+    color: yellow;
+    font-weight: bold;
+}
+
+div.card > p:nth-child(1){
+    color:yellow;
+    font-weight: bold;
+}
+
+
+div.cards{
+    display:grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap:4%;
+    margin-top:15px;
+    margin-left:30px;
+}
+
+div.card{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:5%;
+    border-radius:20px;
+    border-left:7px solid rgba(85, 12, 145, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+div.card:hover{
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+}
+
+div.cardicons{
+    display:flex;
+    justify-content: end;
+    margin-right: 5%;
+    gap: 5%;
+}
+
+div.cardicons > svg{
+    height:30px;
+}
+
+
+/* Now the last but definitely not the least, the right side bar */
+
+div.rightbar{
+    display:flex;
+    flex-direction:column;
+    margin:20px 40px;
+    gap:15px;
+}
+
+div.announcements{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    flex:1;
+    border-radius:20px;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding:6%;
+    transition: all 0.3s ease-in-out;
+}
+
+div.rightbar > p{
+    color:yellow;
+    font-weight: bold;
+}
+
+div.announcements:hover{
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+}
+
+hr{
+    border:none;
+    border-top:1px solid white;
+}
+
+div.announcements > div > p:nth-child(1){
+    color:yellow;
+    margin-bottom:5px;
+}
+
+
+/* Trending */
+
+
+div.trendingbox{
+    display:flex;
+    flex-direction:column;
+    border-radius:20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:25px;
+    flex:1;
+    gap:20px;
+    transition: all 0.3s ease-in-out;
+}
+
+div.trendingbox > div{
+    display:flex;
+    gap: 20px;
+}
+
+
+div.trendingbox > div > img{
+    width:50px;
+    aspect-ratio: 1 / 1 ;
+}
+
+div.trendingbox > div > div > p:nth-child(1){
+    color:yellow;
+}
+
+div.rightbar > p{
+    color:yellow;
+    font-weight: bold;
+    margin-left:5px;
+}
+
+div.trendingbox{
+    margin-bottom:50px;
+}
+
+
+div.trendingbox:hover{
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-3px);
+}
+
